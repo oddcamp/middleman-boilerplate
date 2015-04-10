@@ -14,8 +14,3 @@
     - Builds Middleman and create a browser-sync server
 - $ gulp build
     - Builds Middleman
-
-
-## Todo
-- [ ] Add deploy command
-- [ ] Add update command
