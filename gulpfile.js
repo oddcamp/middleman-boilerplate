@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var rsync = require('gulp-rsync');
 var browserSync = require('browser-sync');
 var cp = require('child_process');
 var messages = {
@@ -29,9 +30,27 @@ gulp.task('watch', function() {
   gulp.watch('source/**/*.*', ['browser-reload']);
 });
 
+gulp.task('rsync', ['middleman-build'], function() {
+  gulp.src('build/**')
+    .pipe(rsync({
+      root: 'build',
+      hostname: '178.62.13.136',
+      username: 'root',
+      destination: '/var/www/middleman-boilerplate',
+      incremental: true,
+      progress: true,
+      relative: true,
+      emptyDirectories: true,
+      recursive: true,
+      clean: true,
+      exclude: ['.DS_Store'],
+      include: []
+    }));
+});
+
 gulp.task('serve', ['browser-sync', 'watch']);
 gulp.task('build', ['middleman-build']);
-// gulp.task('deploy', []);
+gulp.task('deploy', ['rsync']);
 gulp.task('install-bower', function(done) {
   cp.spawn('bower', ['install'], { stdio: 'inherit' }).on('close', done);
 });
