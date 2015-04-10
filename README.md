@@ -1,3 +1,5 @@
+This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middleman projects.
+
 ## Local setup
 
 1. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
