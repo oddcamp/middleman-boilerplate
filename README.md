@@ -1,11 +1,12 @@
-This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middleman projects.
+This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middleman projects. We're currently using Middleman 3.
 
 ## Local setup
 
-1. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
-2. Clone repository
-3. $ npm install
-4. $ gulp install
+1. Make sure you have [the same Ruby version installed as the repo](https://github.com/kollegorna/middleman-boilerplate/blob/master/.ruby-version).
+2. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
+3. Clone repository
+4. $ npm install
+5. $ gulp install
 
 
 ### Gulp commands
@@ -18,3 +19,13 @@ This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middlem
     - Builds Middleman
 - $ gulp deploy
     - Builds Middleman and deploys with rsync
+
+### Configuration
+
+#### Deployment
+
+If you're planning to use rsync for deployment then you have to change the configuration:
+
+[gulpfile.js](https://github.com/kollegorna/middleman-boilerplate/blob/master/gulpfile.js#L33)
+
+By default it's configured to deploy to one of our VPS:s.
