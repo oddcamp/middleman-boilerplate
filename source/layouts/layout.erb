@@ -7,14 +7,15 @@
 
   <title><%= current_page.data.title || "Title" %></title>
 
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "modernizr" %>
 </head>
 <body>
-  <%= partial "header" %>
-
   <%= partial "navigation" %>
+  <%= partial "header" %>
 
   <%= yield %>
 
