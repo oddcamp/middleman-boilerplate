@@ -1,0 +1,15 @@
+body {
+  background: #F4E7B7;
+  font-family: "Roboto", sans-serif;
+}
+
+html, 
+body {
+	height: 100%;
+}
+
+body {	
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
