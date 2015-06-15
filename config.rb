@@ -5,6 +5,13 @@ config[:images_dir] = 'assets/images'
 config[:images_extensions] = %w( svg jpg jpeg gif png webp )
 config[:partials_dir] = 'partials'
 
+#
+# put list of bowers packages to not include image assets from
+# Example:
+# config[:exclude_assets] = %w( modernizr open-iconic )
+# Default:
+config[:exclude_assets] = %w( )
+
 # Configure path for bower assets
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
@@ -16,7 +23,12 @@ after_configuration do
   # Import all the images from bower assets directory to build/assets/images
   Dir[*masks].each do |file_path|
     relative_path = file_path[("#{assets_dir}/".length)..-1] # e.g.: "open-iconic/png/resize-width.png"
-    sprockets.import_asset(relative_path) { "assets/images/#{relative_path}" }
+
+    package_name = relative_path[0..relative_path.index('/')-1]
+
+    unless config[:exclude_assets].include? package_name
+      sprockets.import_asset(relative_path) { "assets/images/#{relative_path}" }
+    end
   end
 end
 
