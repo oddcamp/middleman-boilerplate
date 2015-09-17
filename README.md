@@ -12,19 +12,19 @@ This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middlem
 
 Runs bundle install and bower install
 
-	$ gulp install 
+```$ gulp install```
 
 Builds Middleman and create a BrowserSync server that watches all changes
-	
-	$ gulp serve
+
+```$ gulp serve```
 
 Builds Middleman
-	
-	$ gulp build
-     
+
+```$ gulp build```
+
 Builds Middleman and deploys with rsync
 
-	$ gulp deploy
+```$ gulp deploy```
 
 ### Configuration
 
