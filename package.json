@@ -6,6 +6,7 @@
     "bower": "~1.5.2",
     "browser-sync": "~2.9.2",
     "gulp": "~3.9.0",
-    "gulp-rsync": "0.0.5"
+    "gulp-util": "~3.0.5",
+    "rsyncwrapper": "~0.4.3"
   }
 }
