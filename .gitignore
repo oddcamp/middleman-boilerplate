@@ -15,3 +15,6 @@
 
 # Misc
 .DS_Store
+
+# Amazon configuration
+aws.json

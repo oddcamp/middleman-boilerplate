@@ -3,6 +3,9 @@ var gutil = require('gulp-util');
 var rsync = require('rsyncwrapper').rsync;
 var browserSync = require('browser-sync');
 var cp = require('child_process');
+var s3 = require("gulp-s3");
+var fs = require('fs');
+
 var messages = {
   reload: 'Reloading...',
   build:  'Building Middleman...'
@@ -43,6 +46,11 @@ gulp.task('rsync', ['middleman-build'], function() {
   }, function(error, stdout, stderr, cmd) {
       gutil.log(stdout);
   });
+});
+
+gulp.task('s3', ['middleman-build'], function() {
+  gulp.src('./build/**')
+    .pipe(s3(aws));
 });
 
 gulp.task('serve', ['browser-sync', 'watch']);

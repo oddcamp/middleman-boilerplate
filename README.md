@@ -26,6 +26,10 @@ Builds Middleman and deploys with rsync
 
 ```$ gulp deploy```
 
+Builds Middleman and deploys to s3 bucket
+
+```$ gulp s3```
+
 ### Configuration
 
 #### Deployment
@@ -35,3 +39,22 @@ If you're planning to use rsync for deployment then you have to change the confi
 [gulpfile.js](https://github.com/kollegorna/middleman-boilerplate/blob/master/gulpfile.js#L33)
 
 By default it's configured to deploy to one of our VPS:s.
+
+#### Deploy to Amazon S3
+
+Create a file called aws.json in the root directory with the following content:
+
+```
+{
+  "key": "aws_key",
+  "secret": "aws_secret",
+  "bucket": "bucket_name",
+  "region": "region_name"
+}
+```
+
+(This file must not be committed to git. It's included in .gitignore.)
+
+Add the following line of code just after you've required the modules in gulpfile.js
+
+```aws = JSON.parse(fs.readFileSync('./aws.json'));```
