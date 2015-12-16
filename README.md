@@ -5,30 +5,35 @@ This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middlem
 1. Make sure you have [the same Ruby version installed as the repo](https://github.com/kollegorna/middleman-boilerplate/blob/master/.ruby-version).
 2. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
 3. Clone repository
-4. ``$ npm install``
-5. ``$ gulp install``
+4. ``$ npm install && gulp install``
 
 ### Gulp commands
 
-Runs bundle install and bower install
+The following gulp commands are at your service…
+
+```$ gulp middleman```
+
+Runs bundle exec middleman
 
 ```$ gulp install```
 
-Builds Middleman and create a BrowserSync server that watches all changes
+Runs bundle install and bower install
 
 ```$ gulp serve```
 
-Builds Middleman
+Builds Middleman and create a BrowserSync server that watches all changes
 
 ```$ gulp build```
 
-Builds Middleman and deploys with rsync
+Builds Middleman
 
 ```$ gulp deploy```
 
-Builds Middleman and deploys to s3 bucket
+Builds Middleman and deploys with rsync
 
 ```$ gulp s3```
+
+Builds Middleman and deploys to s3 bucket
 
 ### Configuration
 

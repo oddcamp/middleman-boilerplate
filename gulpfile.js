@@ -53,6 +53,10 @@ gulp.task('s3', ['middleman-build'], function() {
     .pipe(s3(aws));
 });
 
+gulp.task('middleman', function(done) {
+  cp.spawn('bundle', ['exec', 'middleman'], { stdio: 'inherit' }).on('close', done);
+});
+
 gulp.task('serve', ['browser-sync', 'watch']);
 gulp.task('build', ['middleman-build']);
 gulp.task('deploy', ['rsync']);
