@@ -10,6 +10,7 @@ sprockets.append_path File.join app.root, assets_dir
 
 # Pretty urls
 activate :directory_indexes
+activate :livereload
 
 # Minimize css/js and fix assets for Build
 configure :build do
