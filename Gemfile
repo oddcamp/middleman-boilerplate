@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.10"
+gem "middleman", "~>4.0.0"
+gem "middleman-sprockets", "~>4.0.0.rc"
 gem "middleman-autoprefixer"
