@@ -1,10 +1,10 @@
 {
   "name": "kollegorna-middleman-boilerplate",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Middleman boilerplate with Gulp, BrowserSync and Bower",
   "devDependencies": {
-    "bower": "~1.5.2",
-    "browser-sync": "~2.9.2",
+    "bower": "~1.7.2",
+    "browser-sync": "~2.11.0",
     "gulp": "~3.9.0",
     "gulp-s3": "^0.3.0",
     "gulp-util": "~3.0.5",
