@@ -6,6 +6,13 @@ var cp = require('child_process');
 var s3 = require("gulp-s3");
 var fs = require('fs');
 
+var aws = {
+  "key": process.env.AWS_KEY,
+  "secret": process.env.AWS_SECRET,
+  "bucket": process.env.AWS_BUCKET,
+  "region": process.env.AWS_REGION
+}
+
 var messages = {
   reload: 'Reloading...',
   build:  'Building Middleman...'
