@@ -43,7 +43,7 @@ If you're planning to use rsync for deployment then you have to change the confi
 
 [gulpfile.js](https://github.com/kollegorna/middleman-boilerplate/blob/master/gulpfile.js#L33)
 
-By default it's configured to deploy to one of our VPS:s.
+By default it's configured to deploy to one of our VPS's.
 
 #### Deploy to Amazon S3
 
