@@ -11,27 +11,27 @@ This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middlem
 
 The following gulp commands are at your service…
 
-```$ gulp middleman```
-
-Runs bundle exec middleman
-
-```$ gulp install```
+`$ gulp install`
 
 Runs bundle install and bower install
 
-```$ gulp serve```
+`$ gulp middleman`
+
+Runs bundle exec middleman
+
+`$ gulp serve`
 
 Builds Middleman and create a BrowserSync server that watches all changes
 
-```$ gulp build```
+`$ gulp build`
 
 Builds Middleman
 
-```$ gulp deploy```
+`$ gulp deploy`
 
 Builds Middleman and deploys with rsync
 
-```$ gulp s3```
+`$ gulp s3`
 
 Builds Middleman and deploys to s3 bucket
 
@@ -47,7 +47,7 @@ By default it's configured to deploy to one of our VPS's.
 
 #### Deploy to Amazon S3
 
-You need to set the following environment variables.
+You need to set the following environment variables. We recommend that you use [direnv](http://direnv.net/).
 
 ```
 AWS_KEY
