@@ -1,3 +1,6 @@
+# Environment variables
+.envrc
+
 # Bundler config
 /.bundle
 
@@ -15,6 +18,3 @@
 
 # Misc
 .DS_Store
-
-# Amazon configuration
-aws.json
