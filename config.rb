@@ -7,6 +7,8 @@ config[:images_extensions] = %w( svg jpg jpeg gif png webp )
 # Pull in assets installed from Bower
 @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
 bower_assets_dir = @bower_config["directory"]
+
+activate :sprockets
 sprockets.append_path File.join app.root, bower_assets_dir
 
 masks = config[:images_extensions].map { |ext| "#{bower_assets_dir}/**/*.#{ext}" }
@@ -16,7 +18,6 @@ Dir[*masks].each do |file_path|
   relative_path = file_path[("#{bower_assets_dir}/".length)..-1] # e.g.: "open-iconic/png/resize-width.png"
   import_file(file_path, "assets/images/#{relative_path}")
 end
-
 
 # Use pretty urls `www.example.com/blog`
 activate :directory_indexes

@@ -1,9 +1,10 @@
 <nav role="navigation">
   <ul>
-  <% sitemap.where(:primary_navigation => true).order_by(:weight).all.each do |resource| %>
-    <li<% if resource.url == current_page.url %> class="active"<% end %>>
-      <%= link_to resource.metadata[:page]["title"], resource.url %>
-    </li>
-  <% end %>
+    <%# sitemap.where(:primary_navigation => true).order_by(:weight).each do |resource| %>
+    <% sitemap.resources.select { |r| r.data["primary_navigation"] }.sort_by { |r| r.data["weight"] }.each do |resource| %>
+      <li<% if resource.url == current_page.url %> class="active"<% end %>>
+        <%= link_to resource.data["title"], resource.url %>
+      </li>
+    <% end %>
   </ul>
 </nav>
