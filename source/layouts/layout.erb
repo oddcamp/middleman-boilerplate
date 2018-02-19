@@ -3,7 +3,7 @@
   meta_name        = "Kollegorna"
   meta_title       = "Title"
   meta_description = current_page.data.description || "Kollegorna Middleman boilerplate."
-  meta_og_img      = "https://www.yoursite.com/assets/public/#{ current_page.data.share_image || "og-image.jpg"}"
+  meta_og_img      = "https://www.yoursite.com/public/#{ current_page.data.share_image || "og-image.jpg"}"
 
 %><!DOCTYPE html>
 <html lang="en">
@@ -52,7 +52,7 @@
   <!-- Other social networks -->
   <link rel="image_src" href="<%= meta_og_img %>" />
 
-  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "main.bundle" %>
 </head>
 <body>
   <%= partial "partials/header" %>
@@ -61,6 +61,6 @@
 
   <%= partial "partials/footer" %>
 
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "main.bundle" %>
 </body>
 </html>
