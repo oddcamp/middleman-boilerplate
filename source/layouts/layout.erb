@@ -1,18 +1,65 @@
-<!DOCTYPE html>
+<%
+
+  meta_name        = "Kollegorna"
+  meta_title       = "Title"
+  meta_description = current_page.data.description || "Kollegorna Middleman boilerplate."
+  meta_og_img      = "https://www.yoursite.com/assets/public/#{ current_page.data.share_image || "og-image.jpg"}"
+
+%><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title><%= current_page.data.title || "Title" %></title>
-  <%= javascript_include_tag "modernizr" %>
+  <title><%= current_page.data.title ? "#{current_page.data.title} | #{meta_name}" : "#{meta_name} | #{meta_title}" %></title>
+
+  <!-- Behavioral Meta Data -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Core Meta Data -->
+  <meta name="author" content="Kollegorna">
+  <meta name="description" content="<%= meta_description %>">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path('favicons/apple-touch-icon.png') %>">
+  <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-32x32.png') %>" sizes="32x32">
+  <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-16x16.png') %>" sizes="16x16">
+  <link rel="manifest" href="<%= image_path('favicons/manifest.json') %>">
+  <link rel="mask-icon" href="<%= image_path('favicons/safari-pinned-tab.svg') %>" color="#21252b">
+  <meta name="theme-color" content="#00C66B">
+
+  <!-- Google+, Schema.org -->
+  <meta itemprop="name" content="<%= meta_title %>">
+  <meta itemprop="description" content="<%= meta_description %>">
+  <meta itemprop="image" content="<%= meta_og_img %>">
+
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="">
+  <meta property="og:type" content="website" />
+  <meta property="og:meta_name" content="<%= meta_name %>" />
+  <meta property="og:title" content="<%= meta_title %>" />
+  <meta property="og:description" content="<%= meta_description %>" />
+  <meta property="og:image" content="<%= meta_og_img %>" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= meta_title %>" />
+  <meta name="twitter:description" content="<%= meta_description %>" />
+  <meta name="twitter:image:src" content="<%= meta_og_img %>" />
+  <meta name="twitter:site" content="@kollegorna">
+  <meta name="twitter:creator" content="@kollegorna">
+
+  <!-- Other social networks -->
+  <link rel="image_src" href="<%= meta_og_img %>" />
+
   <%= stylesheet_link_tag "application" %>
 </head>
 <body>
   <%= partial "partials/header" %>
 
   <%= yield %>
+
+  <%= partial "partials/footer" %>
 
   <%= javascript_include_tag "application" %>
 </body>
