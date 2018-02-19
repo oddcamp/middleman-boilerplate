@@ -1,8 +1,0 @@
-{
-  "name": "kollegorna-middleman-boilerplate",
-  "version": "1.0.0",
-  "dependencies": {
-    "normalize-scss"  : "~3.0.3",
-    "modernizr": "~2.8.3"
-  }
-}

@@ -1,14 +1,8 @@
 {
   "name": "kollegorna-middleman-boilerplate",
   "version": "1.0.0",
-  "description": "Middleman boilerplate with Bower, Gulp, BrowserSync and rsync + S3 deployment",
+  "description": "Kollegorna Middleman boilerplate",
   "devDependencies": {
-    "bower": "~1.7.2",
-    "browser-sync": "~2.11.0",
-    "gulp": "~3.9.0",
-    "gulp-s3": "^0.3.0",
-    "gulp-util": "~3.0.5",
-    "rsyncwrapper": "~0.4.3",
-    "fs": "0.0.2"
+    "foundation-sites": "^6.4.3"
   }
 }
