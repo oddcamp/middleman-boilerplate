@@ -15,5 +15,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 configure :build do
-
+  activate :relative_assets
+  activate :asset_hash, :ignore => %r{^assets/public/.*}
+  activate :imageoptim
 end
