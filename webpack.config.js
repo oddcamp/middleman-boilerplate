@@ -6,7 +6,6 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 module.exports = {
   entry: {
     main: './assets/javascript/application.js',
-    main: './assets/stylesheets/application.scss',
   },
 
   resolve: {
@@ -28,7 +27,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          "babel-loader",
+          "eslint-loader",
+        ],
       },
       {
         test: /\.css$/,
@@ -82,7 +84,7 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       test: /\.js$/,
       options: {
-        eslint: { failOnWarning: true, failOnError: true },
+        eslint: { failOnWarning: false, failOnError: true },
       },
     }),
     new StyleLintPlugin({

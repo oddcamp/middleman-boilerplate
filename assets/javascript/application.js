@@ -1,1 +1,1 @@
-import './components/header'
+import 'application.scss';
