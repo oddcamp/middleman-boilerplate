@@ -16,5 +16,8 @@
 # Node modules
 /node_modules
 
+.tmp/
+
 # Misc
 .DS_Store
+.sass-cache
