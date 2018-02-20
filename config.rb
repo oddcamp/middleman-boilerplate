@@ -16,6 +16,9 @@ page '/*.txt', layout: false
 
 configure :build do
   activate :relative_assets
-  activate :asset_hash, :ignore => %r{^assets/public/.*}
-  activate :imageoptim
+  activate :asset_hash, :ignore => [/^public/]
+  activate :imageoptim do |options|
+    options.pngout    = false
+    options.svgo      = false
+  end
 end
