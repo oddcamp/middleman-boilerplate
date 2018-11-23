@@ -68,7 +68,10 @@
     }
   },
   "stylelint": {
-    "extends": "stylelint-config-standard",
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ],
     "rules": {
       "no-empty-source": null,
       "block-opening-brace-space-before": null,
@@ -91,11 +94,10 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
     "stylelint": "~7.12",
+    "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-standard": "~16.0",
     "stylelint-webpack-plugin": "^0.8.0",
     "webpack": "^3.11.0"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
