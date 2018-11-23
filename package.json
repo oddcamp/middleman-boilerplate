@@ -73,9 +73,30 @@
       "stylelint-config-prettier"
     ],
     "rules": {
-      "no-empty-source": null,
+      "at-rule-empty-line-before": null,
       "block-opening-brace-space-before": null,
-      "at-rule-name-space-after": null
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extend",
+            "at-root",
+            "debug",
+            "warn",
+            "error",
+            "if",
+            "else",
+            "for",
+            "each",
+            "while",
+            "mixin",
+            "include",
+            "content",
+            "return",
+            "function"
+          ]
+        }
+      ]
     }
   },
   "devDependencies": {
