@@ -8,30 +8,24 @@
 %><!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Initial config -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+  <!-- SEO -->
   <title><%= current_page.data.title ? "#{current_page.data.title} | #{meta_name}" : "#{meta_name} | #{meta_title}" %></title>
-
-  <!-- Behavioral Meta Data -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Core Meta Data -->
-  <meta name="author" content="Kollegorna">
-  <meta name="description" content="<%= meta_description %>">
+  <meta name="author" content="Kollegorna" />
+  <meta name="description" content="<%= meta_description %>" />
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path('favicons/apple-touch-icon.png') %>">
-  <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-32x32.png') %>" sizes="32x32">
-  <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-16x16.png') %>" sizes="16x16">
-  <link rel="manifest" href="<%= image_path('favicons/manifest.json') %>">
-  <link rel="mask-icon" href="<%= image_path('favicons/safari-pinned-tab.svg') %>" color="#21252b">
-  <meta name="theme-color" content="#00C66B">
-
-  <!-- Google+, Schema.org -->
-  <meta itemprop="name" content="<%= meta_title %>">
-  <meta itemprop="description" content="<%= meta_description %>">
-  <meta itemprop="image" content="<%= meta_og_img %>">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path('favicons/apple-touch-icon.png') %>" />
+  <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-32x32.png') %>" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-16x16.png') %>" sizes="16x16" />
+  <link rel="manifest" href="<%= image_path('favicons/manifest.json') %>" />
+  <link rel="mask-icon" href="<%= image_path('favicons/safari-pinned-tab.svg') %>" color="#21252b" />
+  <meta name="theme-color" content="#00C66B" />
+  <meta name="application-name" content="Kollegorna" />
 
   <!-- Facebook -->
   <meta property="fb:app_id" content="">
@@ -46,10 +40,13 @@
   <meta name="twitter:title" content="<%= meta_title %>" />
   <meta name="twitter:description" content="<%= meta_description %>" />
   <meta name="twitter:image:src" content="<%= meta_og_img %>" />
-  <meta name="twitter:site" content="@kollegorna">
-  <meta name="twitter:creator" content="@kollegorna">
+  <meta name="twitter:site" content="@kollegorna" />
+  <meta name="twitter:creator" content="@kollegorna" />
 
-  <!-- Other social networks -->
+  <!-- Google+, Schema.org, Other -->
+  <meta itemprop="name" content="<%= meta_title %>" />
+  <meta itemprop="description" content="<%= meta_description %>" />
+  <meta itemprop="image" content="<%= meta_og_img %>" />
   <link rel="image_src" href="<%= meta_og_img %>" />
 
   <%= stylesheet_link_tag "main.bundle" %>
